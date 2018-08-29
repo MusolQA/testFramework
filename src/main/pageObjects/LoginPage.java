@@ -6,9 +6,10 @@ public class LoginPage {
 
     public WebDriver driver;
 
-    By email= By.cssSelector("[type='email'");
+    By email= By.cssSelector("[typ='email'");
     By password= By.cssSelector("[type='password'");
     By confirm = By.cssSelector("input.btn.btn-primary.btn-md.login-button");
+    public String urlLogin = "https://sso.teachable.com/secure/9521/users/sign_in?clean_login=true&reset_purchase_session=1";
 
     public LoginPage(WebDriver driver) {
         this.driver=driver;

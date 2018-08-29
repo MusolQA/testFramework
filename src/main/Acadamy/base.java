@@ -14,27 +14,23 @@ public class base {
 public WebDriver intalizeDriver() throws IOException {
 
     Properties prop = new Properties();
-    FileInputStream fis=new FileInputStream("C:\\Users\\pruszlewicz\\IdeaProjects\\eworkin\\src\\main\\Acadamy\\data.properties");
+    FileInputStream fis = new FileInputStream("C:\\Users\\pruszlewicz\\IdeaProjects\\eworkin\\src\\main\\Acadamy\\data.properties");
     prop.load(fis);
     String broswerName = prop.getProperty("broswer");
 
-    if(broswerName.equals("chrome"))
-    {
+    if (broswerName.equals("chrome")) {
         System.out.println("chrome");
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
-    }
-    else if(broswerName.equals("firefox"))
-    {
+    } else if (broswerName.equals("firefox")) {
         System.out.println("firefox");
 
-    }
-    else if(broswerName.equals("IE"))
-    {
+    } else if (broswerName.equals("IE")) {
         System.out.println("IE");
     }
 
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    driver.manage().window().maximize();
     return driver;
 }
 
