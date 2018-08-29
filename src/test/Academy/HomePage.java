@@ -40,8 +40,8 @@ public class HomePage extends base {
 
         LoginPage loginp = new LoginPage(driver);
         driver.get(loginp.urlLogin);
-        loginp.getEmail().sendKeys("dasdasa");
-        loginp.getPassword().sendKeys("ewqeqwe");
+        loginp.getEmail().sendKeys(testEmail);
+        loginp.getPassword().sendKeys(testPassword);
         loginp.getConfirm().click();
     }
 
