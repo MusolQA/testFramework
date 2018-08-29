@@ -12,6 +12,7 @@ public class base {
     String homeUrl = "http://www.qaclickacademy.com/";
     String testEmail = "zxcasd@testuj.pl";
     String testPassword = "123qwe123";
+    String testUrl = "emptynow";
 
 public WebDriver intalizeDriver() throws IOException {
 
