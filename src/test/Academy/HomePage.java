@@ -21,11 +21,14 @@ public class HomePage extends base {
     // testing data
 
 
+
+
     @BeforeMethod
 
     public void intalizeBroswer() throws IOException
     {
             driver = intalizeDriver();
+
     }
 
     @Test
@@ -39,9 +42,22 @@ public class HomePage extends base {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(lp.standradLogonButton));
         lp.getStandardLogonButton().click();
-
     }
 
+
+    @Test
+
+    public void shouldLoginAdmin() throws IOException, InterruptedException {
+
+        basePageNavigation();
+        LoginPage lp = new LoginPage(driver);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(lp.getActiveDirectory));
+        lp.getEmail().sendKeys(testEmail);
+        lp.getPassword().sendKeys(testPassword);
+        lp.getConfirm().click();
+
+    }
 
 
 
@@ -64,7 +80,7 @@ public class HomePage extends base {
 
     public void closeBroswer()
     {
-       //  driver.close();
+       driver.close();
     }
 
 

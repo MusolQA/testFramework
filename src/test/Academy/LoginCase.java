@@ -27,7 +27,9 @@ public class LoginCase extends base {
 
     public void shouldSignIn() throws IOException {
 
-        System.out.println("Should execute test ");
+
+
+
     }
 
     @AfterMethod(alwaysRun=true)

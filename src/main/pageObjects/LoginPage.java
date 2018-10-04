@@ -6,9 +6,11 @@ public class LoginPage {
 
     public WebDriver driver;
 
-    By email= By.cssSelector("[type='email'");
-    By password= By.cssSelector("[type='password'");
-    By confirm = By.cssSelector("input.btn.btn-primary.btn-md.login-button");
+    By email= By.cssSelector("input[name='uLogin'");
+    By password= By.cssSelector("input[name='uPassword'");
+    By getActiveDirectory = By.cssSelector("input[name='uDomain'");
+    By confirm = By.cssSelector("button.login-form-button.button-primary-eworkin.ng-binding");
+
     public String urlLogin = "http://krkrnd02.andea.com:83/eworkin/#/";
 
     public LoginPage(WebDriver driver) {
@@ -23,6 +25,12 @@ public class LoginPage {
     public WebElement getPassword()
     {
         return driver.findElement(password);
+    }
+
+    public WebElement getActiveDirectory()
+    {
+
+        return driver.findElement(getActiveDirectory);
     }
 
     public WebElement getConfirm()
