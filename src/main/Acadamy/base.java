@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,10 +10,13 @@ import java.util.concurrent.TimeUnit;
 public class base {
 
     public WebDriver driver;
-    String homeUrl = "http://www.qaclickacademy.com/";
+    String homeUrl = "http://krkrnd02.andea.com:83/eworkin/#/loginad";
+
     String testEmail = "zxcasd@testuj.pl";
     String testPassword = "123qwe123";
     String testUrl = "emptynow2";
+
+
 
 public WebDriver intalizeDriver() throws IOException {
 

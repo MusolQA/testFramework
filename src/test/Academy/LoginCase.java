@@ -1,24 +1,19 @@
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.jar.Pack200.Packer;
-
-import com.beust.jcommander.converters.PathConverter;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
-public class HomePage extends base {
+public class LoginCase extends base {
 
-    // testing data
+
 
 
     @BeforeMethod
@@ -30,20 +25,10 @@ public class HomePage extends base {
 
     @Test
 
-    public void basePageNavigation() throws IOException, InterruptedException {
+    public void shouldSignIn() throws IOException {
 
-
-        driver.get(homeUrl);
-        Thread.sleep(5000);
-        LandingPage lp = new LandingPage(driver);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(lp.standradLogonButton));
-        lp.getStandardLogonButton().click();
-
+        System.out.println("Should execute test ");
     }
-
-
-
 
     @AfterMethod(alwaysRun=true)
     public void catchExceptions(ITestResult result){
@@ -64,7 +49,7 @@ public class HomePage extends base {
 
     public void closeBroswer()
     {
-       //  driver.close();
+        driver.close();
     }
 
 

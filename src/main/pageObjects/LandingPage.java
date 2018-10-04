@@ -6,14 +6,15 @@ public class LandingPage {
 
     public WebDriver driver;
 
-    By login= By.cssSelector("a[href*='sign_in']");
+    By standradLogonButton= By.cssSelector("a[href='#/logindb']");
 
     public LandingPage(WebDriver driver) {
         this.driver=driver;
     }
 
-    public WebElement getLogin()
-   {
-       return driver.findElement(login);
-   }
+    public WebElement getStandardLogonButton()
+    {
+        return driver.findElement(standradLogonButton);
+    }
+
 }
